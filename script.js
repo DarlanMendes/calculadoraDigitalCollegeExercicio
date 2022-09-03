@@ -1,9 +1,14 @@
 let display = document.getElementById("display--calculadora");
-
+let erro=false;
 function digitarNumero(id){
-    let botaoPressionado= document.getElementById(id);
+    teste(id)
+    if(!erro){
+        let botaoPressionado= document.getElementById(id);
     let valorDigitado = botaoPressionado.value;
-    introduzirConteudoDisplay(valorDigitado);  
+    introduzirConteudoDisplay(valorDigitado); 
+    }
+    erro=false;
+     
 }
 
 
@@ -41,7 +46,7 @@ function backspace(){
 
 }
 function percentual(){
-    if(display.innerHTML.includes("+")||display.innerHTML.includes("-")||display.innerHTML.includes("/")){
+    if(display.innerHTML.includes("+")||display.innerHTML.includes("-")||display.innerHTML.includes("/")||display.innerHTML.includes("X")){
         mostrarErro()
         return
     }else{
@@ -56,4 +61,24 @@ function mostrarErro(){
 function inverteSinal(){
     let conteudoSinalInvertido= eval(display.innerHTML)*(-1);
     display.innerHTML= conteudoSinalInvertido;
+}
+
+function teste(id){
+    console.log(id)
+    if(id==="/"||id==="X"||id==="+"||id==="-"){
+    let  conteudoDisplay=display.innerHTML;
+
+      let  ultimoCaracter=conteudoDisplay.substring(display.innerHTML.length-1,display.innerHTML.length);
+    
+    console.log(ultimoCaracter)
+      if(ultimoCaracter==="/"
+      ||ultimoCaracter==="X"
+      ||ultimoCaracter==="+"
+      ||ultimoCaracter==="-"){
+        console.log("entrou")
+          mostrarErro()
+          return erro=true;
+      }
+    }
+    
 }
