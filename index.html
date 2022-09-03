@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div id="corpo--calculadora">
+        <div id="display--calculadora">0</div>
+        <div id="container--teclado--calculadora">
+            <div id="teclado--calculadora">
+                <input type="button" id="%" class="btn" value="%" onclick="percentual()"/>
+                <input type="button" id="CE" class="btn" onclick="limparDisplay()" value="CE"/>
+                <input type="button" id="C" class="btn" onclick="limparDisplay()" value="C"/>
+                <input type="button" id="backspace" class="btn" value="backspace" onclick="backspace()"/>
+                <input type="button" id="7" class="btn" onclick="digitarNumero(id)"value="7">
+                <input type="button" id="8" class="btn" onclick="digitarNumero(id)"value="8"/>
+                <input type="button" id="9" class="btn" onclick="digitarNumero(id)"value="9"/>
+                <input type="button" id="X" class="btn" onclick="digitarNumero(id)"value="X"/>
+                <input type="button" id="*" class="btn" onclick="digitarNumero(id)"value="4"/>
+                <input type="button" id="5" class="btn" onclick="digitarNumero(id)"value="5"/>
+                <input type="button" id="6" class="btn" onclick="digitarNumero(id)"value="6"/>
+                <input type="button" id="-" class="btn" onclick="digitarNumero(id)"value="-"/>
+                <input type="button" id="1" class="btn" onclick="digitarNumero(id)"value="1"/>
+                <input type="button" id="2" class="btn" onclick="digitarNumero(id)"value="2"/>
+                <input type="button" id="3" class="btn" onclick="digitarNumero(id)"value="3"/>
+                <input type="button" id="+" class="btn" onclick="digitarNumero(id)"value="+"/>
+                <input type="button" id="+/-" class="btn" onclick="inverteSinal()"value="+/-"/>
+                <input type="button" id="0" class="btn" onclick="digitarNumero(id)"value="0"/>
+                <input type="button" id="." class="btn" onclick="calcularResultado()"value="="/>
+                <input type="button" id="/" class="btn" onclick="digitarNumero(id)"value="/"/>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+<script src="script.js"></script>
+</body>
+
+</html>
